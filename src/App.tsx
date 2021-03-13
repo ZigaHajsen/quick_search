@@ -16,12 +16,10 @@ const App = () => {
     matches = [];
   }
 
-  console.log(matches);
-
   return (
     <div>
       <Search setSearch={setSearch} />
-      <Result />
+      <Result matches={matches} />
     </div>
   );
 };
