@@ -1,4 +1,8 @@
-const Search: React.FC<any> = ({ setSearch }) => {
+interface SearchProps {
+  setSearch: Function;
+}
+
+const Search: React.FC<SearchProps> = ({ setSearch }) => {
   return (
     <div>
       <h3>State Capital Lookup</h3>

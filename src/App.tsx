@@ -4,7 +4,7 @@ import Result from './components/Result';
 
 import states from './state_capitals.json';
 
-const App = () => {
+const App: React.FC = () => {
   const [search, setSearch] = useState('');
 
   let matches = states.filter((state) => {

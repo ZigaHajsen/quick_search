@@ -1,7 +1,19 @@
-const Result: React.FC<any> = ({ matches }) => {
+interface IMatch {
+  abbr: string;
+  name: string;
+  capital: string;
+  lat: string;
+  long: string;
+}
+
+interface ResultProps {
+  matches: IMatch[];
+}
+
+const Result: React.FC<ResultProps> = ({ matches }) => {
   return (
     <div>
-      {matches.map((match: any) => {
+      {matches.map((match: IMatch) => {
         return (
           <div key={match.name}>
             <h4>
