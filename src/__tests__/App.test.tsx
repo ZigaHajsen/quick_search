@@ -3,7 +3,9 @@ import { render, fireEvent } from '@testing-library/react';
 import App from '../App';
 
 test('<App /> matches snapshot', async () => {
-  const { getByPlaceholderText, getByText } = render(<App />);
+  const { getByPlaceholderText, getByText, container } = render(<App />);
+
+  expect(container).toMatchSnapshot();
 
   const input = getByPlaceholderText('Search Capital');
 
